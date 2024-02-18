@@ -27,6 +27,13 @@ public class OrderEntityService {
 
         return repo.findById(id);
     }
-
+    public void deleteById(long id)
+    {
+        repo.deleteById(id);
+    }
+    public void save(OrderEntity orderEntity)
+    {
+        repo.save(orderEntity);
+    }
 
 }
