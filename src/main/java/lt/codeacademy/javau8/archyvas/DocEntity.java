@@ -8,7 +8,9 @@ public class DocEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String document;
-
+    @ManyToOne
+    @JoinColumn(name = "orderEntity_id")
+    private OrderEntity orderEntity;
 
     public DocEntity(){}
 
@@ -40,3 +42,6 @@ public class DocEntity {
 
 
 }
+
+
+

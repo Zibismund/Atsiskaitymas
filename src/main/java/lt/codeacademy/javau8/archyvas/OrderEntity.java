@@ -13,11 +13,13 @@ import java.util.Set;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         Long id;
 
+
         String clientSurname;
 
         String orderDate;
         String orderNotes;
-
+        @OneToMany(mappedBy = "orderEntity")
+        private Set<DocEntity> documents = new HashSet<>();
         public OrderEntity(){}
 
         public OrderEntity(Long id, String clientSurname, String orderDate, String orderNotes) {
@@ -67,7 +69,18 @@ import java.util.Set;
             this.orderNotes = orderNotes;
         }
 
+        public Set<DocEntity> getDocuments() {
+            return documents;
+        }
 
+        public void setDocuments(Set<DocEntity> documents) {
+            this.documents = documents;
+        }
+
+        public void addDocument(DocEntity doc) {
+            documents.add(doc);
+
+        }
 
         @Override
         public String toString() {
@@ -76,6 +89,10 @@ import java.util.Set;
 
 
     }
+
+
+
+
 
 
 
