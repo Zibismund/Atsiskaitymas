@@ -39,23 +39,6 @@ public class DataLoader implements CommandLineRunner {
         DocEntity doc7 = new DocEntity("K-1, ap.58, b. 131");
         docrepo.save(doc7);
 
-        DocEntity operatyv1 = new DocEntity("K-11, ap. 1, b. 546");
-        DocEntity operatyv2 = new DocEntity("K-11, ap. 1, b. 547");
-        DocEntity operatyv3 = new DocEntity("K-11, ap. 1, b. 548");
-        DocEntity operatyv4 = new DocEntity("K-11, ap. 1, b. 549");
-        DocEntity operatyv5 = new DocEntity("K-11, ap. 1, b. 550");
-        DocEntity operatyv6 = new DocEntity("K-11, ap. 1, b. 551");
-        DocEntity operatyv7 = new DocEntity("K-11, ap. 1, b. 552");
-
-        docrepo.save(operatyv1);
-        docrepo.save(operatyv2);
-        docrepo.save(operatyv3);
-        docrepo.save(operatyv4);
-        docrepo.save(operatyv5);
-        docrepo.save(operatyv6);
-        docrepo.save(operatyv7);
-
-
 
 
 
@@ -69,8 +52,8 @@ public class DataLoader implements CommandLineRunner {
 
 
 
-        order1.addDocument(doc1);
-        order1.addDocument(operatyv1);
+
+
 
 
         repo.save(order1);
@@ -80,7 +63,7 @@ public class DataLoader implements CommandLineRunner {
         repo.save(order5);
         repo.save(order6);
         repo.save(order7);
-        
+
     }
 }
 
